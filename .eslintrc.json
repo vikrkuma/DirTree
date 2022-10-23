@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "max-depth": ["error", { "max": 4 }],
+    "max-len": ["error", { "code": 100, "tabWidth": 2 }],
+    "max-lines": "error",
+    "max-lines-per-function": ["error", { "max": 100 }],
+    "no-nested-ternary": "error",
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "semi": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "no-duplicate-imports": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "eol-last": ["error", "always"],
+    "react/jsx-closing-bracket-location": "error"
+  }
 }

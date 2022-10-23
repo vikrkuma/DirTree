@@ -1,0 +1,11 @@
+node_modules
+dist
+public
+build
+coverage
+package-lock.json
+.DS_Store
+.github
+.husky
+.vscode
+.next
