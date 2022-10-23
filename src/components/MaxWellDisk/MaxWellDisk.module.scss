@@ -1,4 +1,4 @@
-@keyframes animate-disk {
+@keyframes animate-maxwell-disk {
   0% {
     transform: rotateZ(0deg);
   }
@@ -9,7 +9,7 @@
 }
 
 .rotator {
-  animation-name: animate-disk;
+  animation-name: animate-maxwell-disk;
   animation-duration: 40ms;
   animation-timing-function: linear;
   animation-delay: 1s;
