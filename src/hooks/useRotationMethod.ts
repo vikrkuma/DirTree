@@ -16,7 +16,7 @@ export enum RotationMethod {
 
 export default function useRotationMethod(): IRotationMethod {
   const [rotationMethod, setRotationMethod] = useState<RotationMethod>(RotationMethod.STOP);
-  const [speedInMs, setSpeedInMs] = useState<number>(30);
+  const [speedInMs, setSpeedInMs] = useState<number>(60);
 
   return [rotationMethod, speedInMs, setRotationMethod, setSpeedInMs];
 }
