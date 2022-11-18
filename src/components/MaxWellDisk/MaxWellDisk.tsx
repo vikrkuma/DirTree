@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { RotationMethod } from "hooks/useRotationMethod";
 import JsCssMaxWellDisk from "components/JsCssMaxwellDisk";
+import WebGlMaxWellDisk from "components/WebGlMaxWellDisk";
 
 interface IMaxWellDiskProps {
   rotationMethod: RotationMethod;
@@ -8,7 +9,11 @@ interface IMaxWellDiskProps {
 }
 
 function MaxWellDisk({ rotationMethod, speedInMs }: IMaxWellDiskProps) {
-  return <JsCssMaxWellDisk rotationMethod={rotationMethod} speedInMs={speedInMs} />;
+  return rotationMethod === RotationMethod.WEBGL ? (
+    <WebGlMaxWellDisk speedInMs={speedInMs} />
+  ) : (
+    <JsCssMaxWellDisk rotationMethod={rotationMethod} speedInMs={speedInMs} />
+  );
 }
 
 export default memo(MaxWellDisk);
